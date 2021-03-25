@@ -140,6 +140,9 @@ export default {
   data() {
     return {
       date: new Date().toISOString().substr(0, 10),
+      firstName:"",
+      lastName:"",
+      email:"",
       menu: false,
       show1: false,
       show2: true,
