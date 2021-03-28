@@ -1,4 +1,4 @@
-# patagonia
+# tripma
 
 ## Project setup
 ```
