@@ -1,29 +1,59 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import SignIn from "../views/SignIn.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+function loadDashboard(view) {
+  return () =>
+    import(
+      /* webpackChunkName: "view-[request]" */ `@/views/dashboard/${view}.vue`
+    );
+}
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/sign-in",
+    name: "Sign",
+    component: SignIn,
+  },
+  {
+    path: "/dashboard",
+    component: loadDashboard("Dashboard"),
+    children: [
+      {
+        path: "main",
+        name: "DashboardHome",
+        component: loadDashboard("DashboardHome"),
+      },
+      {
+        path: "plan-trip",
+        name: "PlanTrip",
+        component: loadDashboard("PlanTrip"),
+      },
+      {
+        path: "reservations",
+        name: "Reservations",
+        component: loadDashboard("Reservations"),
+      },
+      {
+        path: "settings",
+        name: "Settings",
+        component: loadDashboard("Settings"),
+      },
+    ],
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
