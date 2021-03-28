@@ -200,5 +200,8 @@ export default {};
   .icon {
     margin: 8px;
   }
+  .v-application p.copy_right {
+    margin-bottom: 0;
+  }
 }
 </style>

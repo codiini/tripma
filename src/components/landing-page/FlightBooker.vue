@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <v-container>
     <v-form class="flight-booker">
       <v-container class="flex items-center justify-center">
         <v-row class="flex flex-col lg:flex-row">
@@ -101,6 +102,7 @@
         </v-row>
       </v-container>
     </v-form>
+    </v-container>
   </v-app>
 </template>
 

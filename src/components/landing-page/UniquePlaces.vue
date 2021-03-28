@@ -109,7 +109,7 @@ span {
 }
 @media screen and (min-width: 250px) and (max-width: 600px) {
   .section_text{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 </style>

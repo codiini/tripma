@@ -66,8 +66,18 @@
                     </router-link>
                   </div>
                 </div>
+              </v-col>
+              <v-col cols="12">
                 <UpcomingTrips>
                   <template v-slot:trip-name>Desert Surfing</template>
+                  <template v-slot:trip-duration
+                    >30th June 2021 - 20th July 2021</template
+                  >
+                </UpcomingTrips>
+              </v-col>
+              <v-col cols="12">
+                <UpcomingTrips>
+                  <template v-slot:trip-name>Flexing in Hawaii</template>
                   <template v-slot:trip-duration
                     >30th June 2021 - 20th July 2021</template
                   >

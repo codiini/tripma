@@ -46,16 +46,23 @@ h1 {
     height: 200px;
     width: 100vw;
     text-align: center;
+    display: flex;
+    align-items: center;
   }
   h1 {
     font-size: 60px;
-    padding: 0 40px;
+    padding: 0 30px;
   }
   .hero_bg {
     height: 800px;
     width: 100vw;
     padding: 8px 0px 160px;
     background-size: 100%;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  h1 {
+    padding: 0 130px;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1023px) {
