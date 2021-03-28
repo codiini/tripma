@@ -2,26 +2,13 @@
   <v-container>
     <v-app-bar app elevation="0">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-card
-        class="border border-gray-700 rounded-md ml-6 p-1"
-        elevation="0"
-        tile
-      >
-        <v-icon color="primary" class="pl-2"> mdi-magnify </v-icon>
-        <input
-          type="text"
-          name="search"
-          placeholder="Search"
-          class="py-1 font-light w-96"
-        />
-      </v-card>
       <v-toolbar-title></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-icon medium color="primary" class=""> mdi-bell </v-icon>
       <v-avatar rounded color="primary" class="ml-4">
         <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
       </v-avatar>
-      <h2 class="user-name ml-2 font-light">Iniubong Obonguko</h2>
+      <h2 class="user-name ml-2 font-light hidden md:block">Iniubong Obonguko</h2>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -37,7 +24,7 @@
         <v-flex class="mt-4 mb-3">
           <a href="/dashboard/main">
             <img
-              src="https://s3.eu-west-3.amazonaws.com/com.djionidev.flywallet-webapp/img-flywallet/flywallet.svg"
+              src="https://res.cloudinary.com/codiini/image/upload/v1616764731/tripma-white_mif2b2.svg"
               alt=""
               class="px-6"
             />
@@ -82,7 +69,7 @@
 export default {
   data() {
     return {
-      drawer: true,
+      drawer: false,
     };
   },
 };
