@@ -29,18 +29,21 @@
                   <v-text-field
                     outlined
                     label="First name"
+                    dense
                     v-model="firstName"></v-text-field>
                 </v-col>
                 <v-col cols="12" sm="6">
                   <v-text-field
                     outlined
                     label="Last name"
+                    dense
                     v-model="lastName"></v-text-field>
                 </v-col>
                 <v-col cols="12" sm="6">
                   <v-text-field
                     outlined
                     label="E-mail"
+                    dense
                     v-model="email"></v-text-field>
                 </v-col>
                 <v-col cols="12" sm="6">
@@ -59,6 +62,7 @@
                         readonly
                         outlined
                         v-bind="attrs"
+                        dense
                         v-on="on"></v-text-field>
                     </template>
                     <v-date-picker v-model="date" no-title scrollable>
@@ -95,7 +99,7 @@
                     outlined
                     name="input-10-2"
                     label="Old Password"
-                    value=""
+                    dense
                     @click:append="show1 = !show1"></v-text-field></v-col>
                 <v-col cols="12" sm="6">
                   <v-text-field
@@ -106,7 +110,7 @@
                     name="input-10-2"
                     label="New Password"
                     hint="At least 8 characters"
-                    value=""
+                    dense
                     @click:append="show2 = !show2"
                   ></v-text-field>
                 </v-col>
@@ -119,7 +123,7 @@
                     name="input-10-2"
                     label="Confirm New Password"
                     hint="At least 8 characters"
-                    value=""
+                    dense
                     @click:append="show3 = !show3"></v-text-field>
                 </v-col>
               </v-row>
