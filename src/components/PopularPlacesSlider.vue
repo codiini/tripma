@@ -2,39 +2,14 @@
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide
       v-for="popularPlace in getPopularPlaces"
-      :key="popularPlace.id"
-    >
+      :key="popularPlace.id">
       <v-row>
         <v-col cols="12">
-          <v-card
-            elevation="0"
-            height="100px"
-            class="rounded-lg cursor-pointer"
-          >
-            <v-img :src="popularPlace.image" height="200px" width="150px">
-              <div
-                class="relative top-36 flex flex-col items-center bg-gray-900 bg-opacity-70 pb-2"
-              >
-                <h2 class="text-white font-bold">
-                  {{ popularPlace.name }}
-                </h2>
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center text-white mr-2">
-                    <v-icon color="white" small>mdi-calendar-blank</v-icon>
-                    <small>
-                      {{ popularPlace.duration }}
-                    </small>
-                  </div>
-                  <div class="text-white">
-                    <v-icon color="white" small>mdi-star</v-icon>
-                    <small>
-                      {{ popularPlace.rating }}
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </v-img>
-          </v-card>
+          <PopularPlaceCard :imageSrc="popularPlace.image">
+            <template v-slot:placeName>{{ popularPlace.name }}</template>
+            <template v-slot:placeDuration>{{popularPlace.duration}}</template>
+            <template v-slot:placeRating>{{ popularPlace.rating }}</template>
+          </PopularPlaceCard>
         </v-col>
       </v-row>
     </swiper-slide>
@@ -46,11 +21,13 @@
 import { mapState } from "vuex";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+import PopularPlaceCard from "@/components/PopularPlaceCard";
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
+    PopularPlaceCard,
   },
   data() {
     return {
@@ -107,7 +84,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/base.scss";
-// .swiper {
-//   // height: 100px;
-// }
 </style>
