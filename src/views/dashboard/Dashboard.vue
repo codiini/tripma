@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <NavBar/>
+    <DashboardNavBar/>
     <!-- <keep-alive> -->
     <router-view></router-view>
     <!-- </keep-alive> -->
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar"
+import DashboardNavBar from "@/components/DashboardNavBar"
 export default {
   name:"Dashboard",
   components:{
-    NavBar,
+    DashboardNavBar,
   }
 };
 </script>
