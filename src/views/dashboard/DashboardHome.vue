@@ -44,7 +44,7 @@
               <v-card height="300px" class="rounded-lg">
                 <v-card-title>Popular Destinations</v-card-title>
                 <v-container>
-                  <PopularPlacesSlider />
+                  <!-- <PopularPlacesSlider /> -->
                 </v-container>
               </v-card>
             </v-col>

@@ -7,10 +7,12 @@
       <v-icon medium color="primary" class=""> mdi-bell </v-icon>
       <v-avatar rounded color="primary" class="ml-4">
         <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+
       </v-avatar>
       <h2 class="user-name ml-2 font-light hidden md:block">
         Iniubong Obonguko
       </h2>
+      <v-btn @click="logOut">Log out</v-btn>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -68,12 +70,21 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   data() {
     return {
       drawer: false,
     };
   },
+  methods:{
+  logOut(){
+    firebase.auth().signOut().then(()=>{
+      this.$router.replace({name:'Home'})
+    })
+  }
+}
+
 };
 </script>
 
