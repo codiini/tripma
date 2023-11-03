@@ -13,7 +13,7 @@
               />
             </div>
             <div class="links_section">
-              <ul>
+              <!-- <ul>
                 <p class="links_heading">About</p>
                 <li><a href="#">About Tripma</a></li>
                 <li><a href="#">About us</a></li>
@@ -22,10 +22,10 @@
                 <li><a href="#">Press</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Forum</a></li>
-              </ul>
+              </ul> -->
             </div>
             <div class="links_section">
-              <ul>
+              <!-- <ul>
                 <p class="links_heading">Partner with us</p>
                 <li><a href="#">Partnership program</a></li>
                 <li><a href="#">Affiliate program</a></li>
@@ -34,7 +34,7 @@
                 <li><a href="#">Integrations</a></li>
                 <li><a href="#">Community</a></li>
                 <li><a href="#">Loyalty program</a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
           <div class="lg:flex">
